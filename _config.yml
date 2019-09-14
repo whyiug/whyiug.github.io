@@ -21,7 +21,7 @@ sass:
   style: compressed
 
 # Site Data
-url: http://www.mittapei.cn # the base hostname & protocol for your site, e.g. http://example.com
+url: http://www.mittapei.cn/blog # the base hostname & protocol for your site, e.g. http://example.com
 baseurl:  # the subpath of your site, e.g. /blog
 title: Forrest Yang's Blog
 description: "Never dim young dream"
@@ -62,7 +62,7 @@ google_tag_manager: # e.g. 'GTM-KCQJXZ8F'
 addthis_public_id: # AddThis sharing plugin. See http://www.addthis.com/. E.g. ra-53329e27694534j5 
 
 paths:
-  home: /blog/
+  home: /
   blog: /blog/
   categories: /blog/categories/
   tags: /blog/tags/
