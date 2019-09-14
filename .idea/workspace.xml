@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4387cecc-bfb8-46e9-8dc4-e7b759c1873a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2013-04-22-hello-world.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-05-25-quick-kramdown-demo.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-05-25-quick-kramdown-demo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-04-25-平滑轮询调度算法的数学证明.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-04-25-平滑轮询调度算法的数学证明.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +25,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2019-04-25-平滑轮询调度算法的数学证明.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="171">
-                <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <first_editor relative-caret-position="178">
+                <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -359,8 +357,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-04-25-平滑轮询调度算法的数学证明.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="171">
-            <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <first_editor relative-caret-position="178">
+            <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           </first_editor>
           <second_editor />
         </state>
