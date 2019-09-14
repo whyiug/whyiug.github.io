@@ -21,7 +21,7 @@ sass:
   style: compressed
 
 # Site Data
-url: www.mittapei.cn # the base hostname & protocol for your site, e.g. http://example.com
+url: http://www.mittapei.cn # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: /blog  # the subpath of your site, e.g. /blog
 title: Forrest Yang's Blog
 description: "Never dim young dream"
