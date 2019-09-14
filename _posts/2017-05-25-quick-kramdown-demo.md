@@ -1,127 +1,102 @@
 ---
 layout: post
-title: "Quick kramdown demo"
-description: "A quick demo post to some kramdown features."
-categories: [demo]
-tags: [demo, jekyll]
+title: "DP LCS"
+description: ""
+categories: [ALG]
+tags: [dp, lcs]
 redirect_from:
   - /2017/05/25/
 ---
 
-> This is [kramdown][kramdown] formatting test page for [Simple Texture][Simple Texture] theme.
-
-* Kramdown table of contents
 {:toc .toc}
+## 给定两个序列 X 和 Y，求 X 和Y 的最长公共子序列 (longest common subsequence)。
 
-# General Usage
-
-This is a normal paragraph.
-
-This is [a link](https://yizeng.me) to my homepage.
-A [link](https://yizeng.me/blog "Yi Zeng's Blog") can also have a title.
-
-This is a ***text with light and strong emphasis***.
-
-This **is _emphasized_ as well**.
-
-This *does _not_ work*.
-
-This **does __not__ work either**.
-
-This is a footnote[^1].
-
-This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the `<code>` tag.
-
-This tag should denote <ins>inserted</ins> text.
-
-The emphasize tag should _italicize_ text.
-
-This tag will let you <strike>strikeout text</strike>.
-
-## Blockquotes
-
-> ruby -v
->
-> tsc -v
-
-### Nested
-
-> This is a paragraph in blockquote.
->
-> > A nested blockquote.
->
-
-### Lists inside
-
-> Unordered List
-> * lists one
-> * lists two
-> * lists three
->
-> Ordered List
-> 1. lists one
-> 2. lists two
-> 3. lists three
-
-### Long lines
-
-> Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.
-
-## Lists
-
-* list 1 item 1
-  * nested list item 1
-  * nested list item 2
-  * nested list item 3 with blockquote
-> ruby -v
->
-> tsc -v
-* list 1 item 2
-* list 1 item 3
-
-## Tables
-
-
-* Table 1
-
-    |-----------------+------------+-----------------+----------------|
-    | Default aligned |Left aligned| Center aligned  | Right aligned  |
-    |-----------------|:-----------|:---------------:|---------------:|
-    | First body part |Second cell | Third cell      | fourth cell    |
-    | Second line     |foo         | **strong**      | baz            |
-    | Third line      |quux        | baz             | bar            |
-    | Footer row      |            |                 |                |
-    |-----------------+------------+-----------------+----------------|
-
-* Table 2
-
-    |---
-    | Default aligned | Left aligned | Center aligned | Right aligned
-    |-|:-|:-:|-:
-    | First body part | Second cell | Third cell | fourth cell
-    | Second line |foo | **strong** | baz
-    | Third line |quux | baz | bar
-    | Footer row
-
-## Horizontal Rules
-
-* * *
-
----
-
-  _  _  _  _
-
----------------
-
-## Images
-
-Here comes an image!
-
-<a class="post-image" href="https://kramdown.gettalong.org/overview.png">
-<img itemprop="image" data-src="https://kramdown.gettalong.org/overview.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
-</a>
-
-[^1]: This is a footnote.
-
-[kramdown]: https://kramdown.gettalong.org/
-[Simple Texture]: https://github.com/yizeng/jekyll-theme-simple-texture
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define MAX 200
+#define max(a,b) ((a)>(b)?(a):(b))
+int lcs(const char *X,const int n,const char *Y,const int m)
+{
+    int i,j;
+    /**f[i][j]表示X(1..i)和Y(1..j)的LCS长度*/
+    int f[MAX+1][MAX+1];
+    memset(f,0,sizeof(f));
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=m; j++)
+        {
+            if(X[i-1]==Y[j-1])
+                f[i][j]=f[i-1][j-1]+1;
+            else
+                f[i][j]=max(f[i-1][j],f[i][j-1]);
+        }
+    }
+    return f[n][m];
+}
+int p[MAX+1][MAX+1];
+int lcs_extend(const char *X,const int n,const char *Y,const int m)
+{
+    int i,j;
+    /**f[i][j]表示X(1..i)和Y(1..j)的LCS长度*/
+    int f[MAX+1][MAX+1];
+    memset(f,0,sizeof(f));
+    memset(p,0,sizeof(p));
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=m; j++)
+        {
+            if(X[i-1]==Y[j-1])
+            {
+                f[i][j]=f[i-1][j-1]+1;
+                p[i][j]=1;
+            }
+            else
+            {
+                if(f[i-1][j]>=f[i][j-1])
+                {
+                    f[i][j]=f[i-1][j];
+                    p[i][j]=2;
+                }
+                else
+                {
+                    f[i][j]=f[i][j-1];
+                    p[i][j]=3;
+                }
+            }
+        }
+    }
+    return f[n][m];
+}
+void lcs_print(const char *X,const int n,const char *Y,const int m)
+{
+    if(m==0||n==0)
+        return ;
+    if(p[n][m]==1)
+    {
+        lcs_print(X,n-1,Y,m-1);
+        printf("%c",X[n-1]);
+    }
+    else if(p[n][m]==2)
+        lcs_print(X,n-1,Y,m);
+    else
+        lcs_print(X,n,Y,m-1);
+}
+int main()
+{
+    char X[MAX+1];
+    char Y[MAX+1];
+    FILE *filein=fopen("lcs.txt","rb");
+    while(fscanf(filein,"%s %s",X,Y)!=EOF)
+    {
+        int n=strlen(X);
+        int m=strlen(Y);
+//        printf("%s,%s 的最长公共子序列长度是：%d\n",X,Y,lcs(X,n,Y,m));
+        printf("%s,%s 的最长公共子序列长度是：%d\n",X,Y,lcs_extend(X,n,Y,m));
+        lcs_print(X,n,Y,m);
+        printf("\n");
+    }
+    return 0;
+}
+```
