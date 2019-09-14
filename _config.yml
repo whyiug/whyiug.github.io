@@ -1,7 +1,7 @@
 # Site Settings
 encoding: UTF-8
 exclude: ["*.gem", "*.gemspec", "Gemfile", "Gemfile.lock", "node_modules", "Rakefile", "starter-kit", "vendor"]
-lang: en # Language code as defined in _data/i18n.yml. en, en-gb, en-us, zh, zh-cn, zh-tw etc.
+lang: zh-cn # Language code as defined in _data/i18n.yml. en, en-gb, en-us, zh, zh-cn, zh-tw etc.
 permalink: /blog/:year/:month/:day/:title/
 
 whitelist: [jekyll-feed, jekyll-redirect-from, jekyll-seo-tag, jekyll-sitemap]
@@ -21,21 +21,21 @@ sass:
   style: compressed
 
 # Site Data
-url: # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: # the subpath of your site, e.g. /blog
-title: Simple Texture
-description: "A gem-based responsive simple texture styled Jekyll theme."
-keywords: 'jekyll,theme,gem-based,blog'
+url: www.mittapei.cn # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /blog  # the subpath of your site, e.g. /blog
+title: Forrest Yang's Blog
+description: "Never dim young dream"
+keywords: 'golang, machine learning, data analysis'
 author:
-  name:
-  job_title:
-  location:
-  email:
+  name: Forrest Yang
+  job_title: Engineer
+  location: NanJing China
+  email: whyiug@gmail.com
   social_links:
     - name: facebook
       url:
     - name: github
-      url: https://github.com/yizeng/jekyll-theme-simple-texture
+      url: https://github.com/whyiug
     - name: instagram
       url:
     - name: linkedin
@@ -44,12 +44,12 @@ author:
       url:
     - name: twitter
       url: 
-    - name: vk
-      url:
+#    - name: vk
+#      url:
 home:
-  section1: <h1>Simple Texutre</h1>
-  section2: <h2>A gem-based responsive simple texture styled Jekyll theme</h2>
-  section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/yizeng/jekyll-theme-simple-texture" title="View on GitHub"></a></div>
+  section1: <h1>Forrest Yang's Blog</h1>
+  section2: <h2>Never dim young dream</h2>
+#  section3: <div class="social-links"><a class="ico-github btn" href="https://github.com/yizeng/jekyll-theme-simple-texture" title="View on GitHub"></a></div>
 blog:
   cc_license: http://creativecommons.org/licenses/by-sa/4.0/ # A link to CC License of your choice.
   cc_license_image: /assets/images/theme/cc-by-sa.png # An image of your CC License. 
@@ -62,7 +62,7 @@ google_tag_manager: # e.g. 'GTM-KCQJXZ8F'
 addthis_public_id: # AddThis sharing plugin. See http://www.addthis.com/. E.g. ra-53329e27694534j5 
 
 paths:
-  home: /
+  home: /blog/
   blog: /blog/
   categories: /blog/categories/
   tags: /blog/tags/
