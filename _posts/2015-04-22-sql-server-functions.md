@@ -7,6 +7,9 @@ tags: [sql server]
 redirect_from:
   - /2015/04/22/
 ---
+* Kramdown table of contents
+{:toc .toc}
+
 ## 时间函数
 
 ### datetime时间和UNIX时间戳的转化
