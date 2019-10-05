@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4387cecc-bfb8-46e9-8dc4-e7b759c1873a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2019-10-04-明朝皇帝图谱.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-10-04-明朝皇帝图谱.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/_posts/2017-05-25-quick-kramdown-demo.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="127">
+              <first_editor relative-caret-position="288">
                 <caret line="86" selection-start-line="86" selection-end-line="86" />
               </first_editor>
               <second_editor />
@@ -50,8 +49,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2019-10-04-明朝皇帝图谱.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="416">
-                <caret line="46" selection-start-line="46" selection-end-line="46" />
+              <first_editor relative-caret-position="286">
+                <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               </first_editor>
               <second_editor />
             </state>
@@ -376,7 +375,7 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="127">
+          <first_editor relative-caret-position="288">
             <caret line="86" selection-start-line="86" selection-end-line="86" />
           </first_editor>
           <second_editor />
@@ -386,8 +385,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-10-04-明朝皇帝图谱.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="416">
-            <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <first_editor relative-caret-position="286">
+            <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           </first_editor>
           <second_editor />
         </state>
