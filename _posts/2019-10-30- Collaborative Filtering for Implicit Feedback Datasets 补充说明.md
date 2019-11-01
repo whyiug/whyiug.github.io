@@ -10,7 +10,7 @@ redirect_from:
 
 
 
-工业级推荐系统中经常用到`ALS(alternating least squares)`来进行矩阵分解。本文对 论文[Collaborative Filtering for Implicit Feedback Datasets]([http://yifanhu.net/PUB/cf.pdf](http://yifanhu.net/PUB/cf.pdf))中提到的`ALS`算法作补充说明。
+工业级推荐系统中经常用到`ALS(alternating least squares)`来进行矩阵分解。本文对 论文[Collaborative Filtering for Implicit Feedback Datasets](http://yifanhu.net/PUB/cf.pdf)中提到的`ALS`算法作补充说明。
 
 ### 矩阵分解
 
@@ -18,9 +18,9 @@ redirect_from:
 
 `ALS`希望找到两个比较低维度的矩阵($$X$$和$$Y$$)来逼近这个评分矩阵R。
 
-矩阵分解公式：
+矩阵分解公式： 	$$\mathrm{R}_{m \times n} \approx X_{m \times k} \cdot Y_{n \times k}^{T}$$ ($$k$$为隐因子数量)
 
-$$\mathrm{R}_{m \times n} \approx X_{m \times k} \cdot Y_{n \times k}^{T}$$ ($$k$$为隐因子数量)
+其中：
 
 $$\mathrm{R}_{m \times n}=\left[\begin{array}{ccc}{r_{11}} & {\cdots} & {r_{1 n}} \\ {\vdots} & {\ddots} & {\vdots} \\ {r_{m 1}} & {\cdots} & {r_{m n}}\end{array}\right]$$用户-物品评分矩阵
 
@@ -32,7 +32,7 @@ $$Y_{n \times k}=\left[\begin{array}{ccc}{y_{11}} & {\cdots} & {y_{1 k}} \\ {\vd
 
 ### ALS
 
-代价函数(Loss)： $$\operatorname{Loss}(X, Y)=\sum_{i, u}\left(r_{u i}-\boldsymbol{x}_{u} y_{i}^{T}\right)^{2}+\lambda\left(\sum_{u}\left\|\boldsymbol{x}_{u}\right\|^{2}+\sum_{i}\left\|\boldsymbol{y}_{i}\right\|^{2}\right)$$ ($$λ$$: 正规化系数)
+代价函数(Loss)：	 $$\operatorname{Loss}(X, Y)=\sum_{i, u}\left(r_{u i}-\boldsymbol{x}_{u} y_{i}^{T}\right)^{2}+\lambda\left(\sum_{u}\left\|\boldsymbol{x}_{u}\right\|^{2}+\sum_{i}\left\|\boldsymbol{y}_{i}\right\|^{2}\right)$$ ($$λ$$: 正规化系数)
 
 **计算步骤**：
 
@@ -50,11 +50,11 @@ $$\begin{array}{l}{\frac{\partial \operatorname{loss}(X, Y)}{\partial \boldsymbo
 
 ### ALS-WR
 
-**偏好(Preference)**: **$$p_{u i}=\left\{\begin{array}{ll}{1} & {r_{u i}>0} \\ {0} & {r_{u i}=0}\end{array}\right.$$**
+**偏好(Preference)**: 	**$$p_{u i}=\left\{\begin{array}{ll}{1} & {r_{u i}>0} \\ {0} & {r_{u i}=0}\end{array}\right.$$**
 
-**置信度(Confidence)**: $$c_{u i}=1+\alpha r_{u i}$$
+**置信度(Confidence)**:	 $$c_{u i}=1+\alpha r_{u i}$$
 
-**代价函数(Loss)**：$$\operatorname{Loss}_{A L S-W R}(X, Y)=\sum_{i, u} c_{u i}\left(p_{u i}-\boldsymbol{x}_{u} y_{i}^{T}\right)^{2}+\lambda\left(\sum_{u}\left\|x_{u}\right\|^{2}+\sum_{i}\left\|y_{i}\right\|^{2}\right)$$
+**代价函数(Loss)**：	$$\operatorname{Loss}_{A L S-W R}(X, Y)=\sum_{i, u} c_{u i}\left(p_{u i}-\boldsymbol{x}_{u} y_{i}^{T}\right)^{2}+\lambda\left(\sum_{u}\left\|x_{u}\right\|^{2}+\sum_{i}\left\|y_{i}\right\|^{2}\right)$$
 
 计算步骤和`ALS`基本一样，这里只对$x_u$的推导做说明。
 
