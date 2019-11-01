@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "《Collaborative Filtering for Implicit Feedback Datasets》公式推导说明"
+title: "Collaborative Filtering for Implicit Feedback Datasets 补充说明"
 description: ""
 categories: [ALG]
 tags: [als]
