@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ALS算法公式推导"
+title: "《Collaborative Filtering for Implicit Feedback Datasets》公式推导说明"
 description: ""
 categories: [ALG]
 tags: [als]
