@@ -8,7 +8,6 @@ redirect_from:
   - /2017/05/25/
 ---
 
-> This is [kramdown][kramdown] formatting test page for [Simple Texture][Simple Texture] theme.
 
 * Kramdown table of contents
 {:toc .toc}
@@ -109,7 +108,7 @@ This tag will let you <strike>strikeout text</strike>.
 
 ---
 
-  _  _  _  _
+_  _  _  _
 
 ---------------
 
