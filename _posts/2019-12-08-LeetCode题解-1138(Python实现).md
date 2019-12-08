@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LeetCode题解-873(Python实现)"
+title: "LeetCode题解-1138(Python实现)"
 description: ""
 categories: [ALG]
 tags: [LeetCode]
