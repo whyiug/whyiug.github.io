@@ -12,7 +12,7 @@ redirect_from:
 
 题目：
 
-[Alphabet Board Path](https://leetcode.com/problems/alphabet-board-path/)
+[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 解答：
 
